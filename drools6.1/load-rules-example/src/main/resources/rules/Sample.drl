@@ -1,0 +1,10 @@
+package com.droolsjbpm.examples
+ 
+import com.droolsjbpm.examples.Person;
+ 
+rule "Person"
+    when
+        $p : Person ( name == "Oscar") 
+    then
+        System.out.println("Hello " + $p.getName());
+end
