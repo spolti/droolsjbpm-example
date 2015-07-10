@@ -69,8 +69,8 @@ public class TestRules {
 		KieServices ks = KieServices.Factory.get();
 		KieRepository kr = ks.getRepository();
 		UrlResource urlResource = (UrlResource) ks.getResources().newUrlResource(ARTIFACT_URL);
-		urlResource.setUsername("brmsAdmin");
-		urlResource.setPassword("Kt@25m69");
+		urlResource.setUsername("droolsUser");
+		urlResource.setPassword("droolsPassword");
 		urlResource.setBasicAuthentication("enabled");
 
 		InputStream is = urlResource.getInputStream();
