@@ -8,7 +8,7 @@
 	<version>1.0</version>
 
 	<properties>
-		<brmsVersion>6.0.3-redhat-6</brmsVersion>
+		<brmsVersion>6.2.0.Final-redhat-4</brmsVersion>
 	</properties>
 
 	<repositories>

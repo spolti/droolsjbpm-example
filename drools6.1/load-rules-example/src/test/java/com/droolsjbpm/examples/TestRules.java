@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.drools.core.io.impl.UrlResource;
+import org.drools.core.reteoo.KieComponentFactory;
 import org.junit.Test;
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;
@@ -18,7 +19,7 @@ public class TestRules {
 
 	private Person p = new Person();
 
-	@Test
+	//@Test
 	public void embedded() throws Exception {
 		System.out.println("Using embedded approach.");
 
@@ -36,31 +37,39 @@ public class TestRules {
 
 	@Test
 	public void kieScanner() throws InterruptedException {
-		System.out.println("Using kieScanner approach.");
-
-		// load the jar from .m2
-		System.setProperty("kie.maven.settings.custom", "/home/user/.m2/settings.xml");
+//		System.out.println("Using kieScanner approach.");
+//
+//		// load the jar from .m2
+//		System.setProperty("kie.maven.settings.custom", "/home/fspolti/Downloads/Case01491584/settings.xml");
+//		KieServices kieServices = KieServices.Factory.get();
+//
+//		ReleaseId releaseId = kieServices.newReleaseId("example", "test", "LATEST");
+//		KieContainer kContainer = kieServices.newKieContainer(releaseId);
+//
+//		KieScanner kScanner = kieServices.newKieScanner(kContainer);
+//
+//		kScanner.scanNow();
+//
+//		KieBase kbase = kContainer.getKieBase();
+//		KieSession ksession = kbase.newKieSession();
+//		System.out.println("version: " + kContainer.getReleaseId().getVersion());
+//
+//		ksession.fireAllRules();
+		
+		
+		KieContainer kieContainer = null;
+		final String groupId = "example";
+		final String artifactId = "test";
 		KieServices kieServices = KieServices.Factory.get();
-
-		ReleaseId releaseId = kieServices.newReleaseId("example", "example-load-rules", "LATEST");
-		//ReleaseId releaseId = kieServices.newReleaseId("test", "test", "LATEST");
-		KieContainer kContainer = kieServices.newKieContainer(releaseId);
-
-		KieScanner kScanner = kieServices.newKieScanner(kContainer);
-
-		kScanner.scanNow();
-
-		KieBase kbase = kContainer.getKieBase();
+		kieContainer = kieServices.newKieContainer(kieServices.newReleaseId(groupId, artifactId, "LATEST"));
+		
+		KieBase kbase = kieContainer.getKieBase();
 		KieSession ksession = kbase.newKieSession();
-		System.out.println("version: " + kContainer.getReleaseId().getVersion());
-
-		p.setName("User");
-		ksession.insert(p);
 		ksession.fireAllRules();
-
+//		
 	}
 
-	@Test
+	//@Test
 	public void fromUrl() throws IOException {
 		System.out.println("Using BC's maven URL approach.");
 
