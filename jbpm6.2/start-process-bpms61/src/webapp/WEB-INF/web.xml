@@ -7,12 +7,22 @@
 
 	<servlet>
 		<servlet-name>ProcessServlet</servlet-name>
-		<servlet-class>com.gss.redhat.startProcess.StartProcess</servlet-class>
+		<servlet-class>com.droolsjbpm.examples.servlet.StartProcessServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>ProcessServlet</servlet-name>
 		<url-pattern>/start</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>GetTaskPotentionalOwner</servlet-name>
+		<servlet-class>com.droolsjbpm.examples.servlet.RetrieveTaskListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetTaskPotentionalOwner</servlet-name>
+		<url-pattern>/gettasks</url-pattern>
 	</servlet-mapping>
 	
 
