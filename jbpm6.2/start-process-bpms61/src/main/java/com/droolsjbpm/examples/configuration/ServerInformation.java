@@ -4,8 +4,8 @@ public enum ServerInformation {
 
 	DEPLOYMENT_ID("fspolti:fspolti-test:1.0"),
 	SERVER_URL("http://localhost:8080/business-central"),
-	USER("USER"),
-	PASSWORD("PASSWD");
+	USER("fspolti"),
+	PASSWORD("Kt@25m69");
 	
 	private String ServerInformation;
 		

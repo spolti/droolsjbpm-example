@@ -22,15 +22,7 @@ public class RetrieveTaskList {
 		List<TaskSummary> result = new ArrayList<TaskSummary>();
 		String taskUserId = "fspolti";
 		List<TaskSummary> tasks = taskService.getTasksAssignedAsPotentialOwner(taskUserId, "en-UK");
-
-//		GetTaskAssignedAsPotentialOwnerCommand cmd = new GetTaskAssignedAsPotentialOwnerCommand();
-//		cmd.setUserId("fspolti");
-//		QueryFilter filter = new QueryFilter();
-//		filter.setCount(5);
-//		filter.setOffset(0);
-//		cmd.setFilter(filter);
-//		List<TaskSummary> tasks =  engine.initializeEngine().getKieSession().execute(cmd);
-		
+	
 		
 		for (TaskSummary task : tasks) {
 			  
@@ -43,6 +35,5 @@ public class RetrieveTaskList {
 		}
 		
 		return result;
-	}
-		
+	}		
 }
