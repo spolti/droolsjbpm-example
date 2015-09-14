@@ -30,5 +30,4 @@ public class RetrieveTaskListWithPaging {
 		List<TaskSummary> result =  engine.initializeEngine().getKieSession().execute(cmd);
 		return result;
 	}
-	
 }

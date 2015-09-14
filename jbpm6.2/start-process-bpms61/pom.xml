@@ -99,8 +99,8 @@
 				<configuration>
 					<address>localhost</address>
 					<port>10099</port>
-					<username>fspolti</username>
-					<password>Kt@25m69</password>
+					<username>user</username>
+					<password>password</password>
 				</configuration>
 			</plugin>
 		</plugins>
