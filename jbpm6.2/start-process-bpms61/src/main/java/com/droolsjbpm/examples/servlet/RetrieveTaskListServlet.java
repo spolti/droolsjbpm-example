@@ -15,10 +15,9 @@ import com.droolsjbpm.examples.RetrieveTaskList;
 
 public class RetrieveTaskListServlet extends HttpServlet {
 	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
+	
 	static Logger log =  Logger.getLogger(RetrieveTaskListServlet.class.getCanonicalName());	
 	private RetrieveTaskList tl = new RetrieveTaskList();
 	

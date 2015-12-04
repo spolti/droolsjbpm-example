@@ -19,10 +19,10 @@ public class StartRuntimeEngine {
 	@PostConstruct
 	public RuntimeEngine initializeEngine() throws MalformedURLException {
 		
-		log.info("Initializing Engine with the following parameters..." );
-		log.info("Remote Endpoint: " + ServerInformation.SERVER_URL.getServerInformationValue());
-		log.info("Remote user: " + ServerInformation.USER.getServerInformationValue());
-		log.info("Deployment ID: " + ServerInformation.DEPLOYMENT_ID.getServerInformationValue());
+//		log.info("Initializing Engine with the following parameters..." );
+//		log.info("Remote Endpoint: " + ServerInformation.SERVER_URL.getServerInformationValue());
+//		log.info("Remote user: " + ServerInformation.USER.getServerInformationValue());
+//		log.info("Deployment ID: " + ServerInformation.DEPLOYMENT_ID.getServerInformationValue());
 		
 		RuntimeEngine engine = RemoteRuntimeEngineFactory.newRestBuilder()
 				.addUrl(new URL(ServerInformation.SERVER_URL.getServerInformationValue()))

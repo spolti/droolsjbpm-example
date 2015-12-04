@@ -24,7 +24,7 @@ public class StartProcessServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
     	    	
     	log.info("Trying to start a process on: " + ServerInformation.SERVER_URL.getServerInformationValue());;
-    	ProcessInstance pr = sp.startProcess("fspolti-test.ht");
+    	ProcessInstance pr = sp.startProcess("project1.test");
     	log.info("Process Started: "+ pr.getProcessId());
     	
     }

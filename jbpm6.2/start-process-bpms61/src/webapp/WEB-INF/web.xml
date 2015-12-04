@@ -27,7 +27,7 @@
 		<url-pattern>/gettasks</url-pattern>
 	</servlet-mapping>
 
-	<!-- Get task as PotentionalOwner Servlet Mapping -->
+	<!-- Get task as PotentionalOwner Servlet Mapping>
 	<servlet>
 		<servlet-name>GetTaskPotentionalOwnerWithPaging</servlet-name>
 		<servlet-class>com.droolsjbpm.examples.servlet.RetrieveTaskListWithPagingServlet</servlet-class>
@@ -36,7 +36,7 @@
 	<servlet-mapping>
 		<servlet-name>GetTaskPotentionalOwnerWithPaging</servlet-name>
 		<url-pattern>/gettaskswithpaging</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping-->
 
 
 	<!-- Welcome files -->

@@ -22,7 +22,6 @@ public class RetrieveTaskList {
 		List<TaskSummary> result = new ArrayList<TaskSummary>();
 		String taskUserId = "fspolti";
 		List<TaskSummary> tasks = taskService.getTasksAssignedAsPotentialOwner(taskUserId, "en-UK");
-	
 		
 		for (TaskSummary task : tasks) {
 			  
