@@ -40,7 +40,7 @@ public class TestRules {
 //		System.out.println("Using kieScanner approach.");
 //
 //		// load the jar from .m2
-//		System.setProperty("kie.maven.settings.custom", "/home/fspolti/Downloads/Case01491584/settings.xml");
+//		System.setProperty("kie.maven.settings.custom", "/home/fspolti/Downloads/settings.xml");
 //		KieServices kieServices = KieServices.Factory.get();
 //
 //		ReleaseId releaseId = kieServices.newReleaseId("example", "test", "LATEST");
